@@ -1,0 +1,968 @@
+/*#region --> Variáveis Globais */
+:root {
+    --inem-blue:    #2980B7;
+    --inem-yellow:  #EFC20F;
+    --sns-green:    #4E894C;
+    --sns-red:      #CE1910; 
+    --dark:         #3A3A3A;
+
+    --all-round-borders: 15px;
+    --top-round-borders: 15px 15px 0 0;
+}
+/* #endregion */
+
+/*#region --> Elementos presentes em todo o site (Botões, Cartões, Navbar, Logo, Rodapé, etc) */
+
+/* Títulos */
+h1, h2, h3, h4, h5 {
+    color: var(--inem-blue);
+}
+
+/* 1a letra de todos os elementos h5 fica maiúscula */
+h5 {
+    text-transform: capitalize;
+}
+
+/* Bordas de inputs e caixas de texto em forms, tabelas e alertas */
+.form-control, input.form-control, .adminwarning, div[role=alert], .alert{
+    border-radius: var(--all-round-borders);
+}
+
+/* Canto superior esquerdo das tabelas */
+th:first-child {
+    border-top-left-radius: 15px;
+}
+
+/* Canto superior direito das tabelas */
+th:last-child {
+    border-top-right-radius: 15px;
+}
+
+/* Esconder opção de mudança de tema */
+#theme_switch_link {
+    display: none;
+}
+
+/* Bloco lateral de categoria de disciplinas */
+section.block_course_list.block.list_block.card.mb-3 div.card-text.content.mt-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.block_course_list.block.list_block.card.mb-3 ul.unlist {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/* Caixa de pesquisa de disciplinas */
+#coursesearch > fieldset > input {
+    width: 90vw !important;
+    max-width: 100vw;
+    border-radius: var(--all-round-borders);
+    border: 1px solid var(--inem-blue);
+}
+
+/* Separadores em várias páginas como Scroms e Administração do site */
+ul.nav.nav-tabs > li.nav-item > a {
+    border-radius: var(--top-round-borders);
+}
+
+/* Caminho de cada página que aparece no topo do ecrã */
+#page-navbar {
+    margin: 10px 0px;
+}
+#page-navbar a {
+    color: var(--dark);
+}
+
+/* Legendas dos relatórios */
+.mform legend a {
+    color: var(--inem-blue);
+}
+
+/*#region Botões */
+.btn-primary, .btn-secondary, input.btn.btn-primary, input.btn.btn-secondary, input#id_search, #loginbtn {
+    border-radius: var(--all-round-borders);
+    text-transform: capitalize;
+    min-width: 100px;
+    color: #fff;
+    background: var(--inem-blue);
+    border: 1px solid var(--inem-blue);
+}
+
+.btn-primary:hover, .btn-secondary:hover, input.btn.btn-primary:hover, input.btn.btn-secondary:hover, input#id_search:hover, #loginbtn:hover {
+    color: #fff;
+    background: var(--inem-blue);
+}
+
+input#id_submitbutton {
+    color: #fff;
+    background: var(--sns-green);
+}
+
+input#id_submitbutton:hover {
+    background: var(--sns-green);
+}
+
+input#id_cancel {
+    color: #fff;
+    background: var(--sns-red);
+}
+
+button.btn.btn-outline-secondary.dropdown-toggle,
+ul.dropdown-menu.show, ul.dropdown-menu.show > li > a,
+div.dropdown-menu.show, div.dropdown-menu.show > a {
+    border-radius:var(--all-round-borders);
+}
+
+#dropdown-3 {
+    color: var(--dark);
+}
+
+/* roldana de opções */
+i.icon.fa.fa-cog.fa-fw {
+    color: var(--inem-blue);
+}
+
+/* #endregion */
+
+/*#region Cartões */
+
+section > .card-body .p-3, section.has-blocks.mb-3, section#region-main {
+    border-radius: var(--all-round-borders);
+}
+
+section > div > h5, div[role=listitem] > a > div {
+    border-radius: var(--top-round-borders);
+}
+
+/*#endregion */
+
+/*#region Navbar */
+
+/* Cor da Navbar */
+#header {
+    background: var(--inem-blue)!important;
+}
+
+/* Botão do menu lateral */
+#header > div > div > button {
+    border: none;
+}
+
+/* Arredondar as barras do burger menu */
+#header > div > div > button > span {
+    border-radius: var(--all-round-borders);
+}
+
+/* #endregion */
+
+/*#region Logo */
+
+/* Tamanho do logo */
+.header-main .header-main-content .navbar-brand .logo img {
+    width: 165%;
+}
+
+/* Cor de background do logo */
+.header-main .header-main-content {
+    background: #fff;
+}
+
+/* Opção de escolha da linguagem = esconder */
+.navbar-inner > button {
+    display: none;
+}
+/* #endregion */
+
+/* #region Rodapé */
+
+/* espaçamento em cima da imagem */
+#footer .infoarea .footer-logo a img {
+    padding-top: 13px;
+}
+
+/* frase sobre dados */
+.tool_dataprivacy {
+    color: var(--inem-blue);
+    text-align: center;
+}
+/* #endregion */
+
+/*#endregion */
+
+/*#region --> Menu Lateral */
+
+#nav-drawer > nav .list-group-item {
+    border-radius: var(--all-round-borders);
+}
+/* #endregion */
+
+/*#region --> Menu lateral de Mensagens */
+
+/* Espaçamento entre os elementos da caixa de mensagens */
+.message-app.drawer.bg-light .input-group {
+    justify-content: space-around;
+}
+
+/* Borda da caixa de pesquisa */
+.message-app.drawer.bg-light .input-group input {
+    border: 1px solid var(--inem-blue) !important;
+}
+
+/* Borda da lupa */
+.message-app.drawer.bg-light .input-group span {
+    border: none;
+    background: inherit !important;
+}
+
+/* Cor dos icones */
+.message-app.drawer.bg-light i.icon {
+    color: var(--inem-blue);
+}
+
+/* Borda da lupa depois de carregar na caixa de texto "Procurar" */
+.message-app.drawer.bg-light .input-group-append button {
+    border: 1px solid var(--inem-blue);
+    border-radius: var(--all-round-borders);
+}
+
+/* Botão da lupa on hover */
+.message-app.drawer.bg-light .input-group-append button:hover {
+    border: 1px solid var(--inem-blue);
+    background: var(--inem-blue);
+}
+
+/* Icon da lupa on hover */
+.message-app.drawer.bg-light .input-group-append button:hover i {
+    color: #fff;
+}
+
+/* Borda dos botões Contactos e Pedidos */
+.message-app.drawer.bg-light a.nav-link {
+    border-radius: var(--all-round-borders);
+}
+
+/* Cor dos botões Contactos e pedidos quando estão ativos */
+.message-app.drawer.bg-light a.nav-link.active {
+    background: var(--inem-blue) !important;
+}
+
+/* #endregion */
+
+/*#region --> Menu de utilizador (dropdown) */
+
+#action-menu-1-menu {
+    background: transparent
+}
+
+#header .menubar .dropdown-menu a:last-child {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+/* #endregion */
+
+/* #region --> Página de Mensagens */
+
+/* Margem de cima da página que estava a gerar overflow (gerava scroll bar vertical) */
+#page-message-index #region-main {
+    margin-top: 0px;
+}
+
+/* Caixa de Mensagens e  Caixa de configurações*/
+#page-message-index .message-app.main.bg-light.border.flex-row,  #page-message-index .h-100.bg-white {
+    border-radius: var(--all-round-borders);
+}
+
+/* Caixa de texto para escrever mensagem */
+#page-message-index .message-app.main.bg-light.border.flex-row .footer-container.position-relative {
+    border-bottom-right-radius: 15px;
+}
+
+/* Caixa onde aparece o destinatário da mensagem */
+#page-message-index .message-app.main.bg-light.border.flex-row .bg-white.position-relative.border-bottom.px-2.py-2 {
+    border-top-right-radius: 15px;
+}
+
+/* Cor dos icones */
+#page-message-index i.icon {
+    color: var(--inem-blue);
+}
+
+/* Borda da caixa de pesquisa */
+#page-message-index .input-group input {
+    border: 1px solid var(--inem-blue) !important;
+}
+
+/* Esconder lupa por causa do espaço disponível */
+#page-message-index .input-group-prepend {
+    display: none;
+}
+
+/* Div de pesquisa após clicar na caixa de pesquisa */
+ #page-message-index .panel-header-container .border-bottom.px-2.py-3.view-search .d-flex.align-items-center {
+    flex-direction: column;
+}
+
+/* Cruz de fechar caixa de pesquisa */
+#page-message-index .panel-header-container .border-bottom.px-2.py-3.view-search .d-flex.align-items-center > a {
+    margin: 0px !important;
+}
+
+/* Div de caixa de pesquisa e botão lupa */
+#page-message-index .panel-header-container .border-bottom.px-2.py-3.view-search .input-group {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Espaçamento entre caixa de pesquisa e botão de lupa */
+#page-message-index .panel-header-container .border-bottom.px-2.py-3.view-search .input-group > input {
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* Borda da lupa depois de carregar na caixa de texto "Procurar" */
+#page-message-index .panel-header-container .border-bottom.px-2.py-3.view-search .input-group-append button {
+    border: 1px solid var(--inem-blue);
+    border-radius: var(--all-round-borders);
+}
+
+/* Botão da lupa on hover */
+#page-message-index .panel-header-container .border-bottom.px-2.py-3.view-search .input-group-append button:hover {
+    border: 1px solid var(--inem-blue);
+    background: var(--inem-blue);
+}
+
+/* Icon da lupa on hover */
+#page-message-index .panel-header-container .border-bottom.px-2.py-3.view-search .input-group-append button:hover i {
+    color: #fff;
+}
+
+/* Separadores "Com Estrela"; "Grupo"; "Privada" */
+#page-message-index .panel-body-container .d-flex.flex-column.h-100 .font-weight-bold {
+    font-size: 13px;
+    white-space: normal;
+}
+
+/* Imagens nas pesquisas de contacto = esconder por causa de espaço */
+#page-message-index .panel-body-container img {
+    display: none;
+}
+
+/* Texto "Carregar Mais"*/
+#page-message-index .panel-body-container button.btn.btn-link.text-primary > span {
+    white-space: normal;
+}
+
+/* Borda dos botões Contactos e Pedidos */
+#page-message-index a.nav-link {
+    border-radius: var(--all-round-borders);
+}
+
+/* Cor dos botões Contactos e pedidos quando estão ativos */
+#page-message-index a.nav-link.active {
+    background: var(--inem-blue) !important;
+}
+
+/* #endregion */
+
+/*#region --> Página de Login */
+
+/* cartão */
+.card {
+    border-radius: var(--all-round-borders);
+}
+
+/* secção do logo */
+.text-center {
+    border-radius: var(--top-round-borders);
+}
+
+/* formulário de login */
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Caixas de texto */
+#username, #password{
+    border-radius: var(--all-round-borders);
+    width: 100vh;
+    text-align: center;
+}
+
+/* Texto */
+.row .justify-content-md-center > .col-md-5 {
+    text-align: center;
+}
+
+/* items dentro do cartão */
+#guestlogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-body {
+    text-align: center;
+}
+/* #endregion */
+
+/*#region --> Home Page */
+
+/* --> Título e descrição */
+
+/* Espaçamento em cima do Título */
+.fp-site-customdesc {
+    padding-top: 30px;
+}
+
+/* Espaçamento do Texto, cor da letra e tamanho */
+.fp-site-customdesc p {
+    padding: 20px 30px;
+    color: var(--dark);
+    font-size: 20px;
+}
+
+
+/* -->Procurar Disciplinas */
+
+#coursesearch {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* fieldset da pesquisa */
+#coursesearch > fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título da pesquisa */
+#coursesearch > fieldset > label {
+    margin-bottom: 20px;
+    margin-top: -30px;
+    color: var(--inem-blue);
+    font-size: 28px;
+    font-weight: 400;
+    font-family: arvoregular,Arial,Helvetica,sans-serif;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+/* Botão de Executar */
+#coursesearch > fieldset > button {
+    margin-top: 20px;
+}
+
+
+/* --> Disciplinas Disponíveis */
+
+/* Inverter a ordem das divs: barra de procura e depois disciplinas */
+#region-bs-main-and-pre > div[role=main] {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* Alinhamento do Título e palavras com 1a letra em maiúscula */
+#frontpage-course-list > h2 {
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Caixa do cartão */
+.fp-coursebox {
+    padding: 0px;
+    border: none;
+    border-radius: var(--all-round-borders);
+    background: var(--inem-blue);
+    /* box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22); */
+    transition: 0.4s;
+}
+
+/* Efeito de movimento do cartão */
+.fp-coursebox:hover {
+    transform: scale(1.1);
+    /* box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22); */
+}
+
+/* Outra caixa que está atrás do cartão */
+.fp-coursebox .fp-coursethumb {
+    border: none;
+}
+
+/* Imagem */
+.fp-coursethumb > a > img {
+    border-radius: var(--top-round-borders);
+}
+
+/* Título do cartão */
+.fp-coursebox .fp-courseinfo {
+    padding: 10px 20px;
+}
+.fp-coursebox .fp-courseinfo > h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+.fp-coursebox .fp-courseinfo > h5 > a {
+    color: #fff;
+    font-size: 15px;
+}
+
+/* "Botão" de ler mais */
+.fp-coursebox .readmore a {
+    color:var(--inem-blue);
+    background: #fff;
+    border-radius: 10px;
+}
+.fp-coursebox .readmore a:hover {
+    color: var(--inem-blue);
+    background: #fff;
+    border: 1px solid #fff;
+}
+
+/* #endregion */
+
+/*#region --> Página de Calendário */
+
+/* Caixa do calendário */
+select.select.custom-select.cal_courses_flt {
+    border-radius: var(--all-round-borders);
+}
+
+/* Botão de novo evento, para ficar alinhado */
+.maincalendar button.btn.btn-secondary.float-sm-right.float-right {
+    width: 100px;
+    text-align: center;
+    margin: 0px;
+    height: 40px;
+    padding: 0px;
+}
+
+/* Secção com dois botões para exportar e gerir */
+.maincalendar .bottom {
+    display: flex;
+}
+
+/* Botões exportar e gerir */
+.maincalendar button.btn.btn-secondary {
+    white-space: normal;
+    word-wrap: break-word;
+    width: 120px;
+    height: 50px;
+    padding: 0px;
+    margin: 10px;
+    line-height: 1.2;
+}
+
+/* Items dentro do "Tipo de Eventos" */
+.calendar_filters.mt-2 > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/* Forma à volta do dia selecionado */
+table.minicalendar.calendartable td > a {
+    border-radius: var(--all-round-borders);
+    background: var(--inem-blue);
+}
+
+/* Pop-up de eventos */
+div.popover.fade.bs-popover-top.show {
+    border-radius: var(--all-round-borders);
+}
+div.popover.fade.bs-popover-top.show > * {
+    border-radius: var(--top-round-borders);
+}
+
+/* #endregion */
+
+/*#region --> Página de Ficheiros Privados */
+
+/* Cartão de upload de ficheiros */
+#page-user-files #region-main-box > section#region-main {
+    border-radius: var(--all-round-borders);
+    padding: 0px;
+    padding-right: 40px;
+}
+
+/* Texto de tamanho de ficheiros  */
+ .fp-restrictions > span {
+    text-align: start;
+    font-size: 11px;
+}
+
+/* Caixa de botões */
+div.fp-toolbar {
+    margin-left: 18px;
+}
+
+/* Botões de gestão de ficheiros */
+div.filemanager-toolbar.icon-no-spacing div.fp-viewbar.btn-group.float-sm-right {
+    display: block;
+    margin-left: 18px;
+}
+
+/* Caixa de drop de ficheiros */
+.filemanager-container.card {
+    min-height: 180px;
+}
+
+/* Botões guardar e cancelar */
+#fgroup_id_buttonar {
+    margin: 0px;
+    margin-left: 20px;
+}
+#fgroup_id_buttonar input {
+    white-space: normal;
+    word-wrap: break-word;
+    width: 100px;
+    height: 50px;
+    padding: 0px;
+    line-height: 1.2;
+}
+/* #endregion */
+
+/*#region --> Página de Administração do Site */
+
+/* Título da página */
+#page-admin-search h2 {
+    font-size: 26px;
+}
+
+/* Caixa e botão da pesquisa */
+#page-admin-search #fgroup_id_group_1 {
+    margin: 30px 0px 15px 0px;
+}
+#page-admin-search #fgroup_id_group_1 > div.col-md-9.form-inline.felement {
+    flex-flow: unset;
+    padding: 0px;
+    justify-content: flex-end;
+}
+#page-admin-search #fgroup_id_group_1 > div.form-group.fitem {
+    margin: 0px;
+}
+#page-admin-search #id_query {
+    border-radius: var(--all-round-borders);
+    border: 1px solid var(--inem-blue);
+}
+#page-admin-search label.col-form-label {
+    display: none;
+}
+
+/* #endregion */
+
+/*#region --> Página de Todas as Categorias */
+
+/* Rectângulos das categorias */
+.content > div.subcategories > div > div.info {
+    border-radius: var(--all-round-borders);
+    background: var(--inem-blue);
+}
+
+/* #endregion */
+
+/*#region --> Página de Categoria de Disciplina */
+
+/* Dropdown de categorias */
+#page-course-index-category #switchcategory {
+    margin-bottom: 20px;
+}
+.custom-select.singleselect {
+    border-radius: var(--all-round-borders);
+}
+
+/* Caixa de pesquisa de disciplinas */
+#page-course-index-category #coursesearch > fieldset > input {
+    width: 80vw !important;
+}
+
+/* Cartão de disciplinas */
+.coursebox.clearfix {
+    border-radius: var(--all-round-borders);
+}
+.coursebox .content {
+    min-height: 170px;
+}
+.coursebox > .info > .coursename a {
+    color: var(--inem-blue);
+}
+.courseimage > img {
+    border-radius: var(--all-round-borders);
+}
+
+/* #endregion */
+
+/*#region --> Página de Disciplina */
+
+/* Título */
+h3.sectionname > span > a {
+    color: var(--inem-blue);
+}
+
+/* Imagem */
+#page-course-view-topics div.content img {
+    border-radius: var(--all-round-borders);
+}
+
+/* #endregion */
+
+/*#region --> Página de Scorm */
+
+/* Colocar o botão no centro do ecrã */
+#scormviewform {
+    max-width: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Aumentar altura do botão */
+#scormviewform > input {
+    height: 50px;
+}
+
+/* Margem para o botão de entrar */
+#page-mod-scorm-view .mt-2.mb-1.activity-navigation, #page-mod-scorm-player .mt-2.mb-1.activity-navigation {
+    margin-top: 30px !important;
+}
+
+/* Cor dos botões de atividades */
+#prev-activity-link, #next-activity-link {
+    color: var(--inem-blue);
+}
+
+/* Dar margem no botão "Ir para" e próximo tópico */
+#page-mod-scorm-view section#region-main .row > div, #page-mod-scorm-player section#region-main .row > div {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Alinhar botão "Ir Para" */
+#page-mod-scorm-view section#region-main .row > div form {
+    justify-content: center;
+}
+
+/* Botão "Ir Para" */
+#jump-to-activity {
+    border-radius: var(--all-round-borders);
+}
+
+/* #endregion */
+
+/* ------------------------------- */
+
+/*#region ----> Break-Point Tablet <---- */
+
+@media only screen and (min-width: 768px){
+
+
+    /*#region --> Página de Mensagens <-- */
+    
+    /* Lupa */
+    #page-message-index .input-group-prepend {
+        display: flex;
+    }
+    #page-message-index .input-group-text.pr-0.bg-white {
+        background: transparent !important;
+        border: none;
+        padding: 0px !important;
+        margin-right: 5px;
+    }
+
+    /* Div de pesquisa após clicar na caixa de pesquisa */
+    #page-message-index .panel-header-container .border-bottom.px-2.py-3.view-search .d-flex.align-items-center {
+        flex-direction: row;
+    }
+
+    /* Div de caixa de pesquisa e botão lupa */
+    #page-message-index .panel-header-container .border-bottom.px-2.py-3.view-search .input-group {
+        flex-direction: row;
+    }
+
+    /* Espaçamento entre caixa de pesquisa e botão de lupa */
+    #page-message-index .panel-header-container .border-bottom.px-2.py-3.view-search .input-group > input {
+    margin: 0 10px;
+    width: 1%;
+    }
+
+    /* Separadores "Com Estrela"; "Grupo"; "Privada" */
+    #page-message-index .panel-body-container .d-flex.flex-column.h-100 .font-weight-bold {
+    font-size: inherit;
+    }
+
+    /* Imagens nas pesquisas de contacto = esconder por causa de espaço */
+    #page-message-index .panel-body-container img {
+        display: inline;
+    }
+
+    /* #endregion */
+
+    /*#region --> Home Page <-- */
+
+    /* Tamanho do Logo */
+    .header-main .header-main-content .navbar-brand .logo img {
+        width: auto;
+    }
+
+    /* Esconde menu da escolha de lingua */
+    .header-main .navbar .navbar-inner .navbar-toggleable-md .nav-item {
+        display: none;
+    }
+
+    /* Título do cartão */
+    .fp-coursebox .fp-courseinfo > h5 {
+        height: 80px;
+    }
+
+    /* #endregion */
+
+    /*#region --> Página de Calendário <-- */
+
+    /* botões exportar e gerir */
+    .maincalendar button.btn.btn-secondary {
+        width: auto;
+        height: auto;
+        padding: 10px;
+    }
+    
+    /* #endregion */
+
+    /*#region --> Página de Ficheiros Privados <-- */
+
+    /* texto de tamanho de ficheiros  */
+    .fp-restrictions > span {
+    font-size: revert;
+    }
+
+    /* Botões de vista de ficheiros */
+    div.float-sm-right {
+        float: left !important;
+    }
+
+    /* #endregion */
+
+    /*#region --> Página de Administração do Site <-- */
+
+    /* Caixa de pesquisa */
+    #page-admin-search #id_query {
+        width: 300px;
+    }
+
+    /* #endregion */
+    
+}
+/* #endregion */
+
+/* ------------------------------- */
+
+/*#region ----> Break-Point Específico do Moodle <---- */
+
+@media only screen and (min-width: 868px){
+
+    /* --> Página de Ficheiros Privados <-- */
+
+    /* Botões de vista de ficheiros */
+    div.float-sm-right {
+        float: right !important;
+    }
+
+}
+
+/* #endregion */
+
+/* ------------------------------- */
+
+/*#region ----> Break-Point Desktop <---- */
+
+@media only screen and (min-width: 1200px){
+
+    /* Caixa da pesquisa de disciplinas */
+    #coursesearch > fieldset > input {
+        width: 30vw !important;
+    }
+
+    /*#region --> Botões */
+    .btn-primary, .btn-secondary, input.btn.btn-primary, input.btn.btn-secondary, #loginbtn {
+        border-radius: var(--all-round-borders);
+        text-transform: capitalize;
+        border: 1px solid var(--inem-blue);
+        min-width: 100px;
+    }
+
+    .btn-primary, .btn-secondary, input.btn.btn-primary, input.btn.btn-secondary, input#id_submitbutton, input#id_cancel, input#id_search, #loginbtn {
+        color: var(--inem-blue);
+        background: transparent;
+    }
+
+    input#id_submitbutton:hover {
+        color: #fff;
+        background: var(--sns-green);
+        border: 1px solid var(--sns-green);
+    }
+
+    input#id_cancel:hover {
+        color: #fff;
+        background: var(--sns-red);
+        border: 1px solid var(--sns-red);
+    }
+
+    /* #endregion */
+
+    /*#region --> Home Page */
+
+    /* Caixa do cartão */
+    .fp-coursebox {
+        height: auto;
+    }
+
+    /* Título do cartão */
+    .fp-coursebox .fp-courseinfo > h5 {
+        height: 40px;
+    }
+
+    /* "Botão" de ler mais */
+    .fp-coursebox .readmore a {
+        color: #fff;
+        background: transparent;
+        border-radius: 10px;
+        border: 1px solid #fff;
+    }
+
+    /* #endregion */
+
+    /*#region --> Página de Login */
+
+    /* botão de login */
+    #loginbtn {
+    border: 1px solid var(--inem-blue);
+    color:var(--inem-blue);
+    background: transparent;
+    }
+    #loginbtn:hover {
+    border: 1px solid var(--inem-blue);
+    color: #fff;
+    background: var(--inem-blue);
+    }
+
+    /* #endregion */
+
+    /*#region --> Página de Categoria */
+
+    /* Caixa de pesquisa de disciplinas */
+    #page-course-index-category #coursesearch > fieldset > input {
+    width: 30vw !important;
+    }
+
+    /* #endregion */
+}
+
+/* #endregion */
