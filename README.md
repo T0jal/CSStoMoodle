@@ -24,7 +24,7 @@ As I could not have access to the server and the project at the time I had to us
   
 ## Demo
 
-The website is live at https://aprender.inemip.pt (17/07/2021).
+The website is live at https://aprender.inem.pt (17/07/2021).
 
   
 ## Used By
